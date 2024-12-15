@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Portfolio Website</title>
+    <style>
+        /* Custom CSS */
+        .social-icon {
+            color: white;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #ff6347;
+        }
+
+        .nav-link {
+            position: relative;
+            text-decoration: none;
+        }
+
+        .nav-link:hover::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: red;
+        }
+
+        .profile-photo {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 50%;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px 5px rgba(255, 99, 71, 0.7);
+            border: 2px dotted red;
+        }
+
+        .download-btn {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #ff6347;
+            transform: scale(1.1);
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .profile-photo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .social-icon img {
+                width: 30px;
+                height: 30px;
+            }
+
+            .download-btn {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-sans">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-gray-900 text-white shadow-md py-3 px-6 flex justify-between items-center z-50">
+        <h1 class="text-xl font-bold tracking-wide">Portfolio</h1>
+        <nav class="space-x-4">
+            <a href="#home" class="nav-link hover:text-gray-400 transition duration-300">Home</a>
+            <a href="#about" class="nav-link hover:text-gray-400 transition duration-300">About</a>
+            <a href="#skills" class="nav-link hover:text-gray-400 transition duration-300">Skills</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="flex flex-col items-center justify-center pt-24 pb-10 px-6">
+        <img src="main.jpg" alt="Profile Picture" class="w-40 h-40 profile-photo mb-4">
+        <h1 class="text-2xl font-bold text-red-500">Soumya Byabarta</h1>
+        <h3 class="text-lg text-gray-400">(Chatterjee)</h3>
+        <p class="text-lg text-gray-300 mt-2">Frontend Developer & Passionate Photographer</p>
+
+        <!-- Social Media Icons -->
+        <div class="flex space-x-6 mt-6 justify-center">
+            <a href="https://www.facebook.com/soumya.byabarta" target="_blank" class="social-icon">
+                <img src="fb.png" alt="Facebook" class="w-9 h-9">
+            </a>
+            <a href="https://www.instagram.com/soumya_chatterjee7?igsh=YzljYTk1ODg3Zg==" target="_blank" class="social-icon">
+                <img src="insta.png" alt="Instagram" class="w-9 h-9">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+                <img src="ld.png" alt="LinkedIn" class="w-9 h-9">
+            </a>
+            <a href="https://github.com" target="_blank" class="social-icon">
+                <img src="git.png" alt="GitHub" class="w-9 h-9">
+            </a>
+        </div>
+
+        <!-- Download Resume Button -->
+        <a href="your-resume.pdf" download class="download-btn hover:bg-red-600">Download My Resume</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="text-center py-10 px-6">
+        <h2 class="text-xl font-semibold mb-4 text-red-700">About Me</h2>
+        <p class="text-gray-300 text-sm leading-6">
+            My name is Soumya Byabarta, a Front-End Developer and passionate photographer from Howrah, West Bengal.
+            Currently pursuing B.Tech in Information Technology at Haldia Institute of Technology, I specialize in HTML,
+            CSS, JavaScript, and React. I love creating visually appealing, user-friendly websites and combining my technical
+            skills with my creativity as a photographer. Always eager to learn and explore new opportunities, I enjoy pushing
+            boundaries in both web development and photography.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-10 px-6">
+        <h2 class="text-xl font-semibold text-center mb-6 text-red-500">Skills</h2>
+
+        <!-- Coding Skills -->
+        <h3 class="text-lg font-semibold text-center mb-4 text-red-500">Coding - Technologies I Know</h3>
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+            <div class="bg-gray-800 p-4 rounded shadow-md text-center hover:scale-105 hover:bg-gray-700 transition transform duration-300">
+                <img src="stylized-3d-html-logo-design-free-png.webp" alt="HTML" class="w-12 h-12 mx-auto">
+                <p class="text-gray-200">HTML</p>
+            </div>
+            <div class="bg-gray-800 p-4 rounded shadow-md text-center hover:scale-105 hover:bg-gray-700 transition transform duration-300">
+                <img src="5453030.webp" alt="CSS" class="w-12 h-12 mx-auto">
+                <p class="text-gray-200">CSS</p>
+            </div>
+            <div class="bg-gray-800 p-4 rounded shadow-md text-center hover:scale-105 hover:bg-gray-700 transition transform duration-300">
+                <img src="javascript-logo-javascript-icon-transparent-free-png.webp" alt="JavaScript" class="w-12 h-12 mx-auto">
+                <p class="text-gray-200">JavaScript</p>
+            </div>
+            <div class="bg-gray-800 p-4 rounded shadow-md text-center hover:scale-105 hover:bg-gray-700 transition transform duration-300">
+                <img src="7578017.webp" alt="Java" class="w-12 h-12 mx-auto">
+                <p class="text-gray-200">Java</p>
+            </div>
+            <div class="bg-gray-800 p-4 rounded shadow-md text-center hover:scale-105 hover:bg-gray-700 transition transform duration-300">
+                <img src="Screenshot_2024-12-15_174403-removebg-preview.png" alt="C++" class="w-12 h-12 mx-auto">
+                <p class="text-gray-200">C++</p>
+            </div>
+            <div class="bg-gray-800 p-4 rounded shadow-md text-center hover:scale-105 hover:bg-gray-700 transition transform duration-300">
+                <img src="download.png" alt="C" class="w-12 h-12 mx-auto">
+                <p class="text-gray-200">C</p>
+            </div>
+            <div class="bg-gray-800 p-4 rounded shadow-md text-center hover:scale-105 hover:bg-gray-700 transition transform duration-300">
+                <img src="istockphoto-1334768175-612x612-removebg-preview.png" alt="OOPs" class="w-12 h-12 mx-auto">
+                <p class="text-gray-200">OOPs</p>
+            </div>
+            <div class="bg-gray-800 p-4 rounded shadow-md text-center hover:scale-105 hover:bg-gray-700 transition transform duration-300">
+                <img src="Screenshot_2024-12-15_174613-removebg-preview.png" alt="DSA" class="w-12 h-12 mx-auto">
+                <p class="text-gray-200">DSA</p>
+            </div>
+        </div>
+
+        <!-- Photography Tools -->
+        <h3 class="text-lg font-semibold text-center mt-10 mb-4 text-red-500">Photography Tools I Know</h3>
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+            <div class="bg-gray-800 p-4 rounded shadow-md text-center hover:scale-105 hover:bg-gray-700 transition transform duration-300">
+                <img src="Screenshot_2024-12-15_175401-removebg-preview.png" alt="Adobe Lightroom" class="w-12 h-12 mx-auto">
+                <p class="text-gray-200">Adobe Lightroom</p>
+            </div>
+            <div class="bg-gray-800 p-4 rounded shadow-md text-center hover:scale-105 hover:bg-gray-700 transition transform duration-300">
+                <img src="Screenshot_2024-12-15_175234-removebg-preview.png" alt="CapCut" class="w-12 h-12 mx-auto">
+                <p class="text-gray-200">CapCut</p>
+            </div>
+            <div class="bg-gray-800 p-4 rounded shadow-md text-center hover:scale-105 hover:bg-gray-700 transition transform duration-300">
+                <img src="Screenshot_2024-12-15_175307-removebg-preview.png" alt="DaVinci" class="w-12 h-12 mx-auto">
+                <p class="text-gray-200">DaVinci</p>
+            </div>
+            <div class="bg-gray-800 p-5 rounded shadow-md text-center hover:scale-105 hover:bg-gray-700 transition transform duration-300">
+                <img src="Screenshot_2024-12-15_175637-removebg-preview.png" alt="Picsart" class="w-12 h-12 mx-auto">
+                <p class="text-gray-200">Picsart</p>
+            </div>
+            <div class="bg-gray-800 p-4 rounded shadow-md text-center hover:scale-105 hover:bg-gray-700 transition transform duration-300">
+                <img src="Screenshot_2024-12-15_175532-removebg-preview.png" alt="Canva" class="w-12 h-12 mx-auto">
+                <p class="text-gray-200">Canva</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
